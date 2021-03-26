@@ -1,0 +1,20 @@
+@startmindmap
+'https://plantuml.com/mindmap-diagram
+
+title 优化父类继承
+
+* 英雄:
+** 父类Hero
+*** 属性
+**** 血量
+**** 攻击力
+*** 方法
+**** 打架
+**** 讲台词
+*** 子类
+**** Jinx
+**** EZ
+'** 英雄工厂
+'*** 创造英雄
+
+@endmindmap

@@ -1,0 +1,34 @@
+@startuml
+Class HeroFactory{
+    Class create_hero()
+}
+
+class Hero{
+    #int hp
+    #int power
+
+    ~Bool fight()
+
+}
+class Jinx{
+    #int hp
+    #int power
+
+    ~Bool fight()
+    ~String speak_lines()
+
+}
+class EZ{
+    #int hp
+    #int power
+
+    ~Bool fight()
+    ~String speak_lines()
+
+}
+HeroFactory--> EZ: 实例化
+HeroFactory--> Jinx: 实例化
+Hero<|-- EZ : 继承
+Hero<|-- Jinx: 继承
+@enduml
+
