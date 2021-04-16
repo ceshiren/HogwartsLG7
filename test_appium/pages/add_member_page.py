@@ -8,14 +8,16 @@ from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
 
+from test_appium.pages.base_page import BasePage
 
-class AddMemberPage:
-    def __init__(self, driver: WebDriver):
-        self.driver = driver
+
+class AddMemberPage(BasePage):
+    # def __init__(self, driver: WebDriver):
+    #     self.driver = driver
 
     def addmember_bymenual(self):
         # click [手动输入添加]
-        self.driver.find_element(MobileBy.XPATH, "//*[@text='手动输入添加']").click()
+        self.find(MobileBy.XPATH, "//*[@text='手动输入添加']").click()
         from test_appium.pages.editmember_page import EditMemberPage
         return EditMemberPage(self.driver)
 
