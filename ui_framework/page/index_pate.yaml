@@ -1,0 +1,14 @@
+# 关键字，我们希望，通过写一些关键字，就能运行自动化测试，不用把步骤写到 .py 文件中
+# 目前，我们先定义几组关键字，后面再进行实现，这些关键字还没有实现，可以自由发挥
+goto_market:
+  - action: click
+    by: "xpath"
+    value: "//*[@text='行情']"
+  - action: click
+    by: "xpath"
+    value: "//*[@resource-id='com.xueqiu.android:id/action_search']"
+  - action: send_keys
+    by: "xpath"
+    value: "//*[@resource-id='com.xueqiu.android:id/search_input_text']"
+    content: "alibaba"
+
