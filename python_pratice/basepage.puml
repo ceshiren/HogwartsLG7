@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class BasePage {
+String base_url
+find()
+swipe_find()
+}
+
+class MainPage
+{
+element1
+element2
+goto_login()
+goto_register()
+}
+
+class LoginPage
+{
+element1
+element2
+login()
+goto_register()
+}
+
+BasePage <|-- MainPage
+BasePage <|-- LoginPage
+@enduml
