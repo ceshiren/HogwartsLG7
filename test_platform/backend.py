@@ -4,11 +4,13 @@ import logging
 from flask import Flask, request
 from flask_restful import Resource, Api
 from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS
 
 # 实例化一个flask服务
 app = Flask(__name__)
 
 logging.basicConfig(level=logging.DEBUG)
+CORS(app, supports_credentials=True)
 
 
 # 路由 /根路由
